@@ -67,11 +67,15 @@ cat("Flujo volumétrico (Q):", round(Q, 4), "m³/s\n")
 cat("Número de Reynolds (Re):", round(Re, 0), "\n")  
 cat("Factor de fricción (f):", round(f, 4), "\n")  
 
-# Determinar tipo de flujo  
-if (Re < 2300) {  
-  cat("El flujo es laminar.\n")  
-} else {  
-  cat("El flujo es turbulento.\n")  
-}  
+# Determinar tipo de flujo (criterio de Bird, Stewart y Lightfoot,
+# Fenómenos de Transporte: laminar Re < 2100, transicional 2100-4000,
+# turbulento Re > 4000)
+if (Re < 2100) {
+  cat("El flujo es laminar.\n")
+} else if (Re <= 4000) {
+  cat("El flujo es transicional.\n")
+} else {
+  cat("El flujo es turbulento.\n")
+}
 cat("----------------------------------------\n")  
 

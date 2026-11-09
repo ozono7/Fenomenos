@@ -48,7 +48,10 @@ n_bomba <- approx(datos_bomba$Q_ft3s, datos_bomba$n, xout = Q_req_ft3s)$y
 v <- Q_req_ft3s / A               # Velocidad en ft/s  
 mu <- 6.72e-4                     # Viscosidad dinámica del benceno en lb/(ft·s)
 Re <- (rho * v * D) / mu
-f <- if (Re < 2300) 64/Re else 0.3164 / (Re^0.25)  # Factor de fricción  
+# Criterio de Bird, Stewart y Lightfoot: laminar Re < 2100 (f = 64/Re),
+# turbulento Re > 4000 (Blasius, válido para Re < 10^5). Aquí Re = 25,375,
+# así que el cambio de umbral (antes 2300) no cambia el resultado.
+f <- if (Re < 2100) 64/Re else 0.3164 / (Re^0.25)  # Factor de fricción
 Hf <- f * (Let_total / D) * (v^2) / (2 * g)        # Pérdidas en ft  
 
 # Altura total requerida (H_total)  

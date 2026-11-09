@@ -85,10 +85,12 @@ numero_reynolds <- function(densidad, velocidad, diametro, viscosidad) {
 }
 
 # Determinar tipo de flujo basado en el Número de Reynolds
+# Criterio de Bird, Stewart y Lightfoot (Fenómenos de Transporte):
+# laminar Re < 2100, transicional 2100-4000, turbulento Re > 4000
 tipo_flujo <- function(re) {
-  if (re < 2000) {
+  if (re < 2100) {
     return("Flujo Laminar")
-  } else if (re >= 2000 & re <= 4000) {
+  } else if (re >= 2100 & re <= 4000) {
     return("Flujo Transicional")
   } else {
     return("Flujo Turbulento")

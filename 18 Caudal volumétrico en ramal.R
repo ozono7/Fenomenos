@@ -61,17 +61,19 @@ cat("Caudal en Ramal 2 (Q2):", round(Q2, 4), "ft³/s\n")
 cat("Número de Reynolds en Ramal 1 (Re1):", round(Re1, 0), "\n")  
 cat("Número de Reynolds en Ramal 2 (Re2):", round(Re2, 0), "\n")  
 
-# Tipo de flujo  
-if (Re1 < 2300) {  
-  cat("Flujo en Ramal 1: Laminar\n")  
-} else {  
-  cat("Flujo en Ramal 1: Turbulento\n")  
-}  
+# Tipo de flujo (criterio de Bird, Stewart y Lightfoot, Fenómenos de
+# Transporte: laminar Re < 2100, transicional 2100-4000, turbulento Re > 4000)
+tipo_flujo <- function(Re) {
+  if (Re < 2100) {
+    return("Laminar")
+  } else if (Re <= 4000) {
+    return("Transicional")
+  } else {
+    return("Turbulento")
+  }
+}
 
-if (Re2 < 2300) {  
-  cat("Flujo en Ramal 2: Laminar\n")  
-} else {  
-  cat("Flujo en Ramal 2: Turbulento\n")  
-}  
+cat("Flujo en Ramal 1:", tipo_flujo(Re1), "\n")
+cat("Flujo en Ramal 2:", tipo_flujo(Re2), "\n")
 cat("----------------------------------------\n")
 

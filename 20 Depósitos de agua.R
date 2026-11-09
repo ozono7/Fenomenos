@@ -38,8 +38,12 @@ Re1 <- (rho * v1 * D1) / mu
 Re2 <- (rho * v2 * D2) / mu
 
 # Función para calcular factor de fricción
+# Criterio de Bird, Stewart y Lightfoot (Fenómenos de Transporte):
+# laminar Re < 2100, transicional 2100-4000, turbulento Re > 4000.
+# Aquí Re1 y Re2 son del orden de 10^5, así que el cambio de umbral
+# (antes 2300) no cambia los resultados.
 calcular_f <- function(Re, D) {
-  if (Re < 2300) {
+  if (Re < 2100) {
     return(64 / Re)
   } else {
     f <- uniroot(function(f) {

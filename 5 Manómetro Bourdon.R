@@ -37,7 +37,10 @@ h3 <- P6 / (S3 * densidad_agua)
 altura_G <- 8 + h3
 
 # 5. Calcular la presión en P9 y la altura en el manómetro de mercurio
-P9 <- P6 + (8 - 4) * (S2 * densidad_agua)
+# El tramo 8 -> 4 m contiene el fluido G (S3): cada tramo usa el fluido
+# del piezómetro de su extremo superior (E en 15 -> 12 m, F en 12 -> 8 m,
+# G en 8 -> 4 m).
+P9 <- P6 + (8 - 4) * (S3 * densidad_agua)
 H1 <- P9 / (S4 * densidad_agua)
 altura_Hg <- 4 + H1
 

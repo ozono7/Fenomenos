@@ -25,7 +25,11 @@ salidas <- data.frame(
   Z = c(5, 0, -3, 10),            # Elevación en m  
   Q_m3s = c(0.003154, 0.006308, 0.006308, 0.003154), # Caudal en m³/s  
   P_psig = c(0, 5, 15, 0),        # Presión manométrica en psig  
-  Pabs_kgm2 = c(7943.05, 11460.53, 18491.53, 1943.05) # Presión absoluta en kg/m²
+  # Las cuatro presiones absolutas comparten la misma base atmosférica
+  # (11.30 psi): salida 5: 0 + 11.30 psi; salida 6: 5 + 11.30 psi;
+  # salida 7: 15 + 11.30 psi; salida 8: 0 + 11.30 psi = 7943.05 kg/m².
+  # El valor anterior de la salida 8 (1943.05) era una errata: faltaba el dígito 7.
+  Pabs_kgm2 = c(7943.05, 11460.53, 18491.53, 7943.05) # Presión absoluta en kg/m²
 )
 
 # Convertir presiones a Pa (1 kg/m² = 9.80665 Pa)  
@@ -58,7 +62,8 @@ hL_total <- hL1 + hL2             # En metros
 # La carga de velocidad de cada salida usa su propia área (S_m2), no la de la primera salida
 salidas$H <- salidas$Z + (salidas$Pabs_Pa / (rho_SI * g)) + (salidas$Q_m3s^2 / (2 * g * diametros$S_m2^2)) + hL_total
 
-# Altura máxima requerida (H_max)  
+# Altura máxima requerida (H_max)
+# Con la corrección, la altura máxima corresponde a la salida 8 (21.91 m)
 H_max <- max(salidas$H)  
 
 # Caudal total (Q_total)  

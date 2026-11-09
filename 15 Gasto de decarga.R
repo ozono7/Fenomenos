@@ -20,7 +20,14 @@ D <- 0.1722                 # Diámetro interno de la tubería en ft
 L_T <- 248.9544             # Longitud total de la tubería en ft
 rho <- 61.188               # Densidad del agua a 150°F en lb/ft^3
 mu <- 2.8896e-4             # Viscosidad dinámica del agua a 150°F en lb/(ft·s)
-epsilon <- 0.0009           # Rugosidad relativa para acero comercial
+# Rugosidad ABSOLUTA para acero comercial nuevo: 0.045 mm = 0.00015 ft
+# (tabla de rugosidades de Moody/Colebrook; Cengel, Tabla 8-2). La
+# rugosidad relativa es epsilon/D, adimensional. El valor anterior
+# (0.0009 ft = 0.27 mm) corresponde a fierro fundido o concreto, no a
+# acero comercial. Con 0.0009 como rugosidad relativa (epsilon/D = 0.0009)
+# el gasto saldría 0.5575 ft^3/s, casi igual al de aquí porque
+# 0.0009 * D = 0.000155 ft, prácticamente el valor estándar de acero comercial.
+epsilon <- 0.00015          # Rugosidad absoluta para acero comercial en ft
 
 # Paso 2: Función para calcular el factor de fricción (f) usando la ecuación de Colebrook-White
 friction_factor <- function(epsilon, D, N_Re) {

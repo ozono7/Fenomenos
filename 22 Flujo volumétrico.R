@@ -25,7 +25,8 @@ g <- 9.81                          # Gravedad en m/s²
 # Cálculo del número de Reynolds inicial (Re1)  
 Re1 <- (rho * v1 * D) / mu  
 
-# Factor de fricción inicial (f1) para tubería lisa (Ecuación de Blasius)  
+# Factor de fricción inicial (f1) para tubería lisa (Ecuación de Blasius,
+# válida para Re < 10^5; aquí Re1 = 99,621)  
 f1 <- 0.3164 / (Re1^(1/4))  
 
 # Pérdida de carga inicial (hL1) usando Darcy-Weisbach  
@@ -38,9 +39,18 @@ hL1 <- f1 * (L1 / D) * (v1^2) / (2 * g)
 # Igualando hL1 = hL2 se despeja la longitud nueva:
 # L2 = L1 * (f1/f2) * (v1/v2)^2
 
-# Cálculo de Re2 y f2  
-Re2 <- (rho * v2 * D) / mu  
-f2 <- 0.3164 / (Re2^(1/4))  
+# Cálculo de Re2 y f2
+Re2 <- (rho * v2 * D) / mu
+# La ecuación de Blasius solo vale para tubería lisa con Re < 10^5 y aquí
+# Re2 = 249,052, así que f2 se calcula con la ecuación de Colebrook-White.
+# La tubería es lisa (como se indica para f1), por lo que la rugosidad
+# absoluta es cero y Colebrook se reduce a la ecuación de Prandtl para
+# tubería lisa: 1/sqrt(f) = -2*log10(2.51/(Re*sqrt(f))).
+colebrook_lisa <- function(Re) {
+  uniroot(function(f) 1/sqrt(f) + 2 * log10(2.51 / (Re * sqrt(f))),
+          interval = c(0.001, 0.1))$root
+}
+f2 <- colebrook_lisa(Re2)
 
 # Longitud final necesaria (L2)  
 L2 <- L1 * (f1 / f2) * (v1 / v2)^2  

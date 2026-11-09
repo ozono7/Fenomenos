@@ -37,7 +37,11 @@ P_atm <- 14.7  # Presión atmosférica en psi
 P_aire <- P_atm - (gamma_Hg * h3_pulgadas)
 
 # 6. Calcular la presión en el manómetro A
-P_A <- (gamma_aceite * h2_pulgadas) + P_aire
+# Ecuación hidrostática del manómetro: al recorrer el manómetro desde A
+# hasta el depósito se desciende por dos columnas de aceite, h2 y h1,
+# por lo que ambas suman (gamma_aceite * h). h1 estaba definida y
+# convertida pero no se usaba en la ecuación.
+P_A <- (gamma_aceite * h2_pulgadas) + (gamma_aceite * h1_pulgadas) + P_aire
 
 # 7. Mostrar la presión en el manómetro A
 cat("Lectura del manómetro A:", round(P_A, 2), "psi\n")

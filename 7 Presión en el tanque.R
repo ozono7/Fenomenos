@@ -14,7 +14,10 @@
 
 
 # Paso 1: Definir las constantes y variables
-Q <- 0.114                  # Caudal volumétrico en ft^3/s (50 gal/min convertido)
+# El dato del problema es 50 gal/min; 1 ft^3/s = 448.831 gal/min, por lo
+# que Q = 50 / 448.831 = 0.1114 ft^3/s. El valor anterior (0.114 ft^3/s)
+# era una conversión incorrecta (equivale a 51.2 gal/min).
+Q <- 50 / 448.831           # Caudal volumétrico en ft^3/s (50 gal/min)
 L <- 3000                   # Longitud de la tubería en ft
 D <- 0.2557                 # Diámetro interno de la tubería en ft (3 pulgadas cedula 40)
 rho <- 62.3                 # Densidad del petróleo en lb/ft^3

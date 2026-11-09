@@ -14,9 +14,10 @@
 
 # 1. Cálculo del Número de Reynolds
 # Fórmula: Re = (densidad * velocidad * diametro) / viscosidad
-# El Número de Reynolds indica el régimen de flujo:
-#   - Re < 2000: Flujo Laminar
-#   - 2000 <= Re <= 4000: Flujo Transicional
+# El Número de Reynolds indica el régimen de flujo (criterio de Bird,
+# Stewart y Lightfoot, Fenómenos de Transporte):
+#   - Re < 2100: Flujo Laminar
+#   - 2100 <= Re <= 4000: Flujo Transicional
 #   - Re > 4000: Flujo Turbulento
 
 numero_reynolds <- function(densidad, velocidad, diametro, viscosidad) {
@@ -34,9 +35,9 @@ re <- numero_reynolds(densidad, velocidad, diametro, viscosidad)
 print(paste("Número de Reynolds:", re))
 
 # Determinar el tipo de flujo
-if (re < 2000) {
+if (re < 2100) {
   print("Tipo de Flujo: Laminar")
-} else if (re >= 2000 & re <= 4000) {
+} else if (re >= 2100 & re <= 4000) {
   print("Tipo de Flujo: Transicional")
 } else {
   print("Tipo de Flujo: Turbulento")

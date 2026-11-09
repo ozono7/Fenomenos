@@ -16,7 +16,15 @@
 # Paso 1: Definir las constantes y variables
 Q <- 6                      # Caudal volumétrico en m^3/s
 D_old <- 2                  # Diámetro de la tubería vieja en m
-epsilon_old <- 0.03         # Rugosidad de la tubería vieja en m
+# Rugosidad de la tubería vieja: 0.003 m (3 mm). La tubería es vieja y sin
+# revestir (por eso se reviste): el valor de Moody para fierro fundido
+# NUEVO es 0.26 mm, pero la rugosidad crece con la corrosión y la
+# tuberculación, y en tuberías viejas llega a milímetros. El valor
+# anterior (0.03 m = 30 mm) era un error de un decimal. Con el valor de
+# tubería nueva (0.00026 m) el revestimiento saldría más caro que la
+# tubería vieja, porque el revestimiento mismo tiene epsilon = 0.001 m
+# y reduce el diámetro, así que 0.00026 m no puede ser el dato del problema.
+epsilon_old <- 0.003        # Rugosidad de la tubería vieja en m
 epsilon_new <- 0.001        # Rugosidad de la tubería nueva en m
 thickness <- 0.012          # Espesor del revestimiento en m
 rho <- 998.2                # Densidad del agua a 20°C en kg/m^3
