@@ -21,10 +21,6 @@ rho <- 998.2                       # Densidad del agua a 20°C en kg/m³
 mu <- 1.002e-3                     # Viscosidad dinámica en Pa·s  
 g <- 9.81                          # Gravedad en m/s²  
 
-# Conversión de unidades (opcional, para trabajar en SI)  
-D_ft <- D * 3.28084                # Diámetro en ft  
-v1_ft <- v1 * 3.28084              # Velocidad en ft/s  
-v2_ft <- v2 * 3.28084  
 
 # Cálculo del número de Reynolds inicial (Re1)  
 Re1 <- (rho * v1 * D) / mu  
@@ -35,13 +31,12 @@ f1 <- 0.3164 / (Re1^(1/4))
 # Pérdida de carga inicial (hL1) usando Darcy-Weisbach  
 hL1 <- f1 * (L1 / D) * (v1^2) / (2 * g)  
 
-# Relación de velocidades y pérdidas de carga  
-# hL ∝ v² (para misma longitud), pero queremos hL2 = hL1 * (v2/v1)^2  
-# Como hL ∝ L, la nueva longitud (L2) debe satisfacer:  
-# hL1 = f1 * (L1/D) * (v1²/2g)  
-# hL2 = f2 * (L2/D) * (v2²/2g)  
-# Igualando hL1 = hL2 (misma energía disponible):  
-# L2 = L1 * (f1/f2) * (v1/v2)^2  
+# Relación de velocidades y pérdidas de carga
+# Con la misma energía disponible, la pérdida de carga es la misma (hL1 = hL2):
+# hL1 = f1 * (L1/D) * (v1²/2g)
+# hL2 = f2 * (L2/D) * (v2²/2g)
+# Igualando hL1 = hL2 se despeja la longitud nueva:
+# L2 = L1 * (f1/f2) * (v1/v2)^2
 
 # Cálculo de Re2 y f2  
 Re2 <- (rho * v2 * D) / mu  

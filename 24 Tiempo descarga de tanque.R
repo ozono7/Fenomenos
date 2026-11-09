@@ -40,14 +40,14 @@ Q_req_ft3s <- volumen_ft3 / tiempo_deseado
 Q_req_gpm <- Q_req_ft3s * 448.831 # Conversión a GPM  
 
 # Interpolar datos de la bomba para Q_req  
-library(dplyr)  
 bomba_req <- approx(datos_bomba$Q_ft3s, datos_bomba$H_ft, xout = Q_req_ft3s)  
 H_bomba <- bomba_req$y  
 n_bomba <- approx(datos_bomba$Q_ft3s, datos_bomba$n, xout = Q_req_ft3s)$y  
 
 # Cálculo de pérdidas de carga (Hf)  
 v <- Q_req_ft3s / A               # Velocidad en ft/s  
-Re <- (rho * v * D) / (6.72e-4)   # Viscosidad del benceno ≈ 6.72e-4 lb/(ft·s)  
+mu <- 6.72e-4                     # Viscosidad dinámica del benceno en lb/(ft·s)
+Re <- (rho * v * D) / mu
 f <- if (Re < 2300) 64/Re else 0.3164 / (Re^0.25)  # Factor de fricción  
 Hf <- f * (Let_total / D) * (v^2) / (2 * g)        # Pérdidas en ft  
 

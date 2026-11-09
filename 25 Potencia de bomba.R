@@ -16,7 +16,8 @@
 eficiencia <- 0.68                # Eficiencia de la bomba (68%)  
 rho <- 62.37                      # Densidad del agua a 60°F en lb/ft³  
 g <- 9.81                         # Gravedad en m/s²  
-gc <- 1                           # Factor de conversión en SI (kg·m/N·s²)  
+gc <- 1                           # Factor de conversión en SI (kg·m/N·s²)
+rho_SI <- rho * 16.0185        # Densidad del agua en kg/m³ (1 lb/ft³ = 16.0185 kg/m³)
 
 # Datos de las salidas (convertidos a unidades consistentes)  
 salidas <- data.frame(
@@ -33,10 +34,10 @@ salidas$Pabs_Pa <- salidas$Pabs_kgm2 * 9.80665
 # Diámetros y velocidades (para pérdidas por fricción)  
 diametros <- data.frame(
   D_in = c(4, 3.5, 3, 2),
-  D_m = c(0.1022, 0.0901, 0.0779, 0.0524),
-  S_m2 = c(0.0082, 0.0063, 0.0047, 0.0021),
-  U_ms = c(0.38409, 0.98871, 1.32521, 1.46027)
+  D_m = c(0.1022, 0.0901, 0.0779, 0.0524)
 )
+diametros$S_m2 <- pi * (diametros$D_m / 2)^2  # Área transversal en m²
+diametros$U_ms <- salidas$Q_m3s / diametros$S_m2  # Velocidad en m/s
 
 # Longitudes de tubería (supuestas para el ejemplo)  
 L1 <- 100 * 0.3048                # Convertir ft a m (100 ft)  
@@ -54,7 +55,8 @@ hL2 <- f * (L2 / diametros$D_m[4]) * (diametros$U_ms[4]^2) / (2 * g)
 hL_total <- hL1 + hL2             # En metros  
 
 # Cálculo de la altura total (H) para cada salida  
-salidas$H <- salidas$Z + (salidas$Pabs_Pa / (rho * 16.0185 * g)) + (salidas$Q_m3s^2 / (2 * g * diametros$S_m2[1]^2)) + hL_total  
+# La carga de velocidad de cada salida usa su propia área (S_m2), no la de la primera salida
+salidas$H <- salidas$Z + (salidas$Pabs_Pa / (rho_SI * g)) + (salidas$Q_m3s^2 / (2 * g * diametros$S_m2^2)) + hL_total
 
 # Altura máxima requerida (H_max)  
 H_max <- max(salidas$H)  
@@ -63,7 +65,7 @@ H_max <- max(salidas$H)
 Q_total <- sum(salidas$Q_m3s)     # 0.018924 m³/s  
 
 # Potencia de la bomba (en Watts)  
-Potencia_W <- (rho * 16.0185) * Q_total * g * H_max / eficiencia  
+Potencia_W <- rho_SI * Q_total * g * H_max / eficiencia
 
 # Convertir a HP (1 HP = 745.7 W)  
 Potencia_HP <- Potencia_W / 745.7  

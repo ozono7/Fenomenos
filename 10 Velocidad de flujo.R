@@ -21,7 +21,7 @@ P_B <- 16.7                # Presión en la estación B en psig
 nu <- 0.005                # Viscosidad cinemática del petróleo en ft²/s
 dr <- 0.90                 # Gravedad específica del petróleo (adimensional)
 S <- 0.08840               # Área transversal de la tubería en ft²
-gc <- 32.2                 # Factor de conversión gravitacional en (lb·ft)/(lb·s²)
+gc <- 32.2                 # Factor de conversión gravitacional en (lb·ft)/(lb_f·s²)
 
 # Paso 2: Calcular la densidad del petróleo (ρ)
 # ρ = dr * densidad del agua

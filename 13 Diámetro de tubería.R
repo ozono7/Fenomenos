@@ -23,7 +23,7 @@ mu <- 8.8e-4               # Viscosidad dinámica del agua a 25°C en kg/(m·s)
 epsilon <- 2.6e-4          # Rugosidad absoluta del fierro fundido en m
 
 # Paso 2: Función para calcular el diámetro de la tubería
-# D = (8 * Q^2 * L_T * f) / (pi^2 * h * g * D^4)
+# D^5 = (8 * Q^2 * L_T * f) / (pi^2 * h * g)
 # Se utiliza un método iterativo para encontrar el diámetro correcto
 
 # Función para calcular el número de Reynolds
@@ -54,8 +54,7 @@ max_iter <- 1000
 for (i in 1:max_iter) {
   N_Re_val <- N_Re(D_initial)
   f <- friction_factor(D_initial, epsilon, N_Re_val)
-  D_new <- (8 * Q^2 * L_T * f) / (pi^2 * h * g * D_initial^4)
-  D_new <- D_new^(1/5)
+  D_new <- ((8 * Q^2 * L_T * f) / (pi^2 * h * g))^(1/5)
   
   if (abs(D_new - D_initial) < tolerance) {
     D_final <- D_new

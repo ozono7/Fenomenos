@@ -39,8 +39,6 @@ K_total <- K_entrada + K_codos_4in + K_expansion + K_codos_6in + K_valvula + K_s
 A1 <- pi * (D1^2) / 4                # Área tubería 4 in  
 A2 <- pi * (D2^2) / 4                # Área tubería 6 in  
 
-# Suposición inicial de Q (ft³/s)  
-Q <- 1.0                             # Valor inicial  
 
 # Función para resolver el balance de energía  
 calcular_Q <- function(Q) {
@@ -52,8 +50,17 @@ calcular_Q <- function(Q) {
   Re2 <- (rho * v2 * D2) / mu  
   
   # Factores de fricción (Colebrook-White)  
-  f1 <- ifelse(Re1 < 2300, 64/Re1, uniroot(function(f) 1/sqrt(f) + 2*log10(epsilon/(3.7*D1) + 2.51/(Re1*sqrt(f))), c(0.001, 0.1))$root)  
-  f2 <- ifelse(Re2 < 2300, 64/Re2, uniroot(function(f) 1/sqrt(f) + 2*log10(epsilon/(3.7*D2) + 2.51/(Re2*sqrt(f))), c(0.001, 0.1))$root)  
+  # ifelse evalúa las dos ramas; con if/else Colebrook solo se resuelve si el flujo es turbulento
+  if (Re1 < 2300) {
+    f1 <- 64 / Re1
+  } else {
+    f1 <- uniroot(function(f) 1/sqrt(f) + 2*log10(epsilon/(3.7*D1) + 2.51/(Re1*sqrt(f))), c(0.001, 0.1))$root
+  }
+  if (Re2 < 2300) {
+    f2 <- 64 / Re2
+  } else {
+    f2 <- uniroot(function(f) 1/sqrt(f) + 2*log10(epsilon/(3.7*D2) + 2.51/(Re2*sqrt(f))), c(0.001, 0.1))$root
+  }
   
   # Pérdidas por fricción  
   hL_friccion <- (f1 * (L1/D1) * (v1^2)/(2*g)) + (f2 * (L2/D2) * (v2^2)/(2*g))  

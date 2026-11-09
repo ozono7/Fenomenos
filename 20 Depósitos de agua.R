@@ -17,7 +17,6 @@ Q <- 5.0                          # Flujo volumétrico en ft³/s
 rho <- 62.6                       # Densidad del agua en lb/ft³
 mu <- 7.728e-4                    # Viscosidad dinámica en lb/(ft·s)
 g <- 32.2                         # Gravedad en ft/s²
-gc <- 32.2                        # Factor de conversión
 
 # Geometría de tuberías
 D1 <- 18 / 12                     # Diámetro tubería 1 (18 in) en ft

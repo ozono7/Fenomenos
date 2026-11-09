@@ -41,12 +41,13 @@ K_TR <- f * (L / D1)              # Coeficiente de pérdida por fricción
 # Coeficiente de pérdida total (K_TA)  
 K_TA <- K_TR + K_Expansion  
 
-# Pérdidas de carga  
-Hfs_A <- (K_TA * v1^2) / (2 * gc)  # Pérdida en tubería 4 in  
-Hfs_B <- (K_Expansion * v2^2) / (2 * gc)  # Pérdida en tubería 8 in  
+# Pérdida de carga
+# K_TA ya incluye la pérdida por expansión (K_Expansion), referida a v1;
+# no se vuelve a sumar referida a v2, porque sería contar la misma pérdida dos veces
+Hfs_A <- (K_TA * v1^2) / (2 * gc)  # Pérdida por fricción y expansión, en ft
 
-# Pérdida de presión total (ΔP)  
-Delta_P <- rho * (Hfs_A + Hfs_B)   # en lb/ft²  
+# Pérdida de presión total (ΔP)
+Delta_P <- rho * Hfs_A   # en lb/ft²
 
 # Convertir a psi (1 psi = 144 lb/ft²)  
 Delta_P_psi <- Delta_P / 144  

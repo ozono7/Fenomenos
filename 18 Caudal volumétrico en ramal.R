@@ -23,26 +23,26 @@ Hfs_total <- delta_Z         # Pérdida de carga total (lb·ft)/lb
 # Datos de los ramales  
 # Ramal 1  
 L1 <- 30                     # Longitud en ft  
-D1 <- 2 / 12                 # Diámetro en ft (convertido de in a ft)  
-S1 <- 0.02330                # Área transversal en ft²  
-fT1 <- 0.019                 # Factor de fricción de Darcy  
-K_T1 <- 3.31010453           # Coeficiente de pérdida total  
+D1 <- 0.1722                 # Diámetro interno en ft (2 in, cédula 40)
+S1 <- pi * (D1^2) / 4        # Área transversal en ft²
+fT1 <- 0.019                 # Factor de fricción de Darcy
+K_T1 <- fT1 * (L1 / D1)      # Coeficiente de pérdida total
 
 # Ramal 2  
 L2 <- 30                     # Longitud en ft  
-D2 <- 3 / 12                 # Diámetro en ft (convertido de in a ft)  
-S2 <- 0.05130                # Área transversal en ft²  
-fT2 <- 0.018                 # Factor de fricción de Darcy  
-K_T2 <- 2.111849824          # Coeficiente de pérdida total  
+D2 <- 0.2557                 # Diámetro interno en ft (3 in, cédula 40)
+S2 <- pi * (D2^2) / 4        # Área transversal en ft²
+fT2 <- 0.018                 # Factor de fricción de Darcy
+K_T2 <- fT2 * (L2 / D2)      # Coeficiente de pérdida total
 
 # Función para calcular caudal (Q) dada la pérdida de carga  
-calcular_Q <- function(K_T, S, rho, Hfs) {  
+calcular_Q <- function(K_T, S, Hfs) {
   sqrt((2 * gc * S^2 * Hfs) / K_T)  
 }  
 
 # Cálculo de caudales  
-Q1 <- calcular_Q(K_T1, S1, rho, Hfs_total)  
-Q2 <- calcular_Q(K_T2, S2, rho, Hfs_total)  
+Q1 <- calcular_Q(K_T1, S1, Hfs_total)
+Q2 <- calcular_Q(K_T2, S2, Hfs_total)
 
 # Cálculo de velocidades  
 v1 <- Q1 / S1

@@ -20,7 +20,7 @@ D <- 0.5054                  # Diámetro interno de la tubería en ft (6 pulgada
 S <- 0.2006                  # Área transversal de la tubería en ft^2
 mu <- 0.07889                # Viscosidad dinámica del aceite en lb/(ft·s)
 gc <- 32.2                   # Factor de conversión gravitacional en (lb·ft)/(lb·s^2)
-gamma <- 0.82                # Peso específico del aceite (adimensional)
+gravedad_especifica <- 0.82  # Gravedad específica del aceite (adimensional; no se usa en Hagen-Poiseuille, que no depende de la densidad)
 
 # Paso 2: Calcular la velocidad del flujo (U)
 # U = Q / S

@@ -17,7 +17,7 @@ densidad_liquido <- 800  # Densidad del líquido en kg/m³
 densidad_agua <- 999.64  # Densidad del agua en kg/m³
 densidad_relativa_liquido <- densidad_liquido / densidad_agua  # Relación con el agua
 
-gamma_agua <- 999.64  # Peso específico del agua en kg/m³
+gamma_agua <- 999.64  # Peso específico del agua en kgf/m³ (numéricamente igual a su densidad en kg/m³)
 gamma_liquido <- densidad_relativa_liquido * gamma_agua  # Peso específico del líquido en kg/m³
 gamma_mercurio <- 13.6 * gamma_agua  # Peso específico del mercurio en kg/m³
 

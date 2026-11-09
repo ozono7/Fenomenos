@@ -1,5 +1,5 @@
 # ==========================================================================
-# Problema 11: Cálculo de la potencia necesaria para bombear un líquido a través de una tubería
+# Problema 11: Ecuación de Blasius — potencia necesaria para bombear un líquido a través de una tubería
 # ==========================================================================
 # Autor: Dr. José Juan Torres Martínez
 # Docente de Ciencias Químicas
@@ -20,7 +20,7 @@ Q <- 3                     # Caudal volumétrico en ft³/s
 nu <- 3.3e-4               # Viscosidad cinemática en ft²/s
 rho <- 55                  # Densidad del líquido en lb/ft³
 gc <- 32.2                 # Factor de conversión gravitacional en (lb·ft)/(lb·s²)
-L_milla <- 5278.87139      # Longitud de una milla en ft
+L_milla <- 5280              # Longitud de una milla en ft (1 milla = 5280 ft)
 
 # Paso 2: Calcular la velocidad del flujo (U)
 U <- Q / S                 # Velocidad del flujo en ft/s
@@ -32,7 +32,7 @@ N_Re <- (D * U) / nu       # Número de Reynolds (adimensional)
 f <- 0.3164 / (N_Re^(1/4)) # Factor de fricción (adimensional)
 
 # Paso 5: Calcular la pérdida de energía debido a la fricción (-W_f)
-# -W_f = (f * U² * L_T) / (2 * gc * D)
+# -W_f = (f * U² * L) / (2 * gc * D)
 W_f <- (f * U^2 * L_milla) / (2 * gc * D)  # Pérdida de energía en lb_f·ft/lb
 
 # Paso 6: Calcular el flujo másico (w)

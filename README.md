@@ -4,7 +4,7 @@ Problemas resueltos en R de mecánica de fluidos y fenómenos de
 transporte: medición de presión con manómetros, velocidad y tipo de
 flujo en tuberías, pérdidas de carga por fricción y accesorios, potencia
 de bombeo y costo de bombeo. Cada archivo resuelve un problema con sus
-cálculos y sus gráficas.
+cálculos.
 
 ## Contenido
 
@@ -24,8 +24,7 @@ cálculos y sus gráficas.
 ## Cómo usarlo
 
 Cada archivo `.R` es un problema independiente y documentado: ábrelo en
-R o RStudio y ejecútalo completo. Solo necesitas R instalado; los
-paquetes que usa cada problema se indican al inicio del archivo.
+R o RStudio y ejecútalo completo. Solo necesitas R instalado; los cálculos usan R base, sin paquetes adicionales.
 
 ## Autor
 

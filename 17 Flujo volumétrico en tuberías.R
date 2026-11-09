@@ -31,24 +31,32 @@ v <- sqrt((2 * delta_P * D) / (f * L * rho))
 # 3. Cálculo del número de Reynolds (Re)  
 Re <- (rho * v * D) / mu  
 
-# 4. Cálculo del factor de fricción (f) usando la ecuación de Colebrook-White  
+# 4. Iterar el factor de fricción (f) con la ecuación de Colebrook-White
 # Función para resolver Colebrook-White iterativamente  
 colebrook <- function(f, Re, epsilon, D) {  
   1/sqrt(f) + 2 * log10((epsilon/D)/3.7 + 2.51/(Re * sqrt(f)))  
 }  
 
-# Usamos uniroot para encontrar f (rango: 0.001 a 0.1)  
-f_solution <- uniroot(function(f) colebrook(f, Re, epsilon, D), interval = c(0.001, 0.1))  
-f <- f_solution$root  
+# Iterar con uniroot hasta que f, v y Re sean consistentes entre sí
+# (f depende de Re, Re depende de v y v depende de f)
+tolerancia <- 1e-6
+for (i in 1:100) {
+  f_nuevo <- uniroot(function(f) colebrook(f, Re, epsilon, D), interval = c(0.001, 0.1))$root
+  v_nuevo <- sqrt((2 * delta_P * D) / (f_nuevo * L * rho))
+  Re_nuevo <- (rho * v_nuevo * D) / mu
+  if (abs(f_nuevo - f) < tolerancia) {
+    f <- f_nuevo
+    v <- v_nuevo
+    Re <- Re_nuevo
+    break
+  }
+  f <- f_nuevo
+  v <- v_nuevo
+  Re <- Re_nuevo
+}
 
-# 5. Recalcular v con el nuevo f  
-v <- sqrt((2 * delta_P * D) / (f * L * rho))  
-
-# 6. Recalcular Re con la nueva v  
-Re <- (rho * v * D) / mu  
-
-# 7. Calcular el flujo volumétrico (Q)  
-Q <- v * (pi * D^2 / 4)  
+# 5. Calcular el flujo volumétrico (Q)
+Q <- v * (pi * D^2 / 4)
 
 # Resultados  
 cat("----------------------------------------\n")  

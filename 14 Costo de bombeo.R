@@ -62,9 +62,10 @@ W_f_old <- (U_old^2) / (2 * g) + (f_old * U_old^2 * L_T) / (2 * g * D_old)
 W_f_new <- (U_new^2) / (2 * g) + (f_new * U_new^2 * L_T) / (2 * g * D_new)
 
 # Paso 7: Calcular la potencia hidráulica antes y después del revestimiento
+# P_H = rho * g * Q * H = w * g * W_f, porque W_f es la carga en metros
 w <- Q * rho  # Flujo másico en kg/s
-P_H_old <- W_f_old * w  # Potencia hidráulica antes del revestimiento en W
-P_H_new <- W_f_new * w  # Potencia hidráulica después del revestimiento en W
+P_H_old <- W_f_old * w * g  # Potencia hidráulica antes del revestimiento en W
+P_H_new <- W_f_new * w * g  # Potencia hidráulica después del revestimiento en W
 
 # Paso 8: Calcular la potencia requerida antes y después del revestimiento
 P_R_old <- P_H_old / efficiency  # Potencia requerida antes del revestimiento en W
@@ -79,6 +80,6 @@ savings_per_hour <- cost_old - cost_new  # Ahorro por hora en $/h
 savings_per_year <- savings_per_hour * 24 * 365  # Ahorro por año en $/año
 
 # Paso 11: Mostrar los resultados
-print(paste("El ahorro en el costo de bombeo por kilómetro es:", round(savings_per_hour, 4), "$/h"))
+print(paste("El ahorro en el costo de bombeo por hora (tubería de 1 km) es:", round(savings_per_hour, 4), "$/h"))
 print(paste("El ahorro en el costo de bombeo por año es:", round(savings_per_year, 4), "$/año"))
 

@@ -34,18 +34,24 @@ N_Re <- (D * rho * U) / mu  # Número de Reynolds (adimensional)
 # ΔP = (32 * U * mu * L) / (gc * D^2)
 delta_P <- (32 * U * mu * L) / (gc * D^2)  # Caída de presión en lb/ft^2
 
-# Paso 5: Calcular la presión relativa en el tanque A (P1)
-# P1 = ΔP + P_atm
-P1 <- delta_P + P_atm       # Presión relativa en lb/ft^2
+# Paso 5: Calcular la presión en el tanque A
+# La presión RELATIVA (manométrica) es la caída de presión ΔP:
+# el tanque debe estar ΔP por arriba de la atmósfera para impulsar el flujo
+P1_rel <- delta_P           # Presión relativa en lb/ft^2
+# La presión ABSOLUTA es la relativa más la atmosférica
+P1_abs <- delta_P + P_atm   # Presión absoluta en lb/ft^2
 
 # Paso 6: Mostrar los resultados
 print(paste("La velocidad del flujo es:", round(U, 4), "ft/s"))
 print(paste("El número de Reynolds es:", round(N_Re, 4)))
 print(paste("La caída de presión es:", round(delta_P, 4), "lb/ft^2"))
-print(paste("La presión relativa en el tanque A es:", round(P1, 4), "lb/ft^2"))
+print(paste("La presión relativa en el tanque A es:", round(P1_rel, 4), "lb/ft^2"))
+print(paste("La presión absoluta en el tanque A es:", round(P1_abs, 4), "lb/ft^2"))
 
 # Paso 7: Convertir la presión relativa a psi (opcional)
 # 1 psi = 144 lb/ft^2
-P1_psi <- P1 / 144          # Presión relativa en psi
-print(paste("La presión relativa en el tanque A es:", round(P1_psi, 4), "psi"))
+P1_rel_psi <- P1_rel / 144  # Presión relativa en psi
+P1_abs_psi <- P1_abs / 144  # Presión absoluta en psi
+print(paste("La presión relativa en el tanque A es:", round(P1_rel_psi, 4), "psi"))
+print(paste("La presión absoluta en el tanque A es:", round(P1_abs_psi, 4), "psi"))
 

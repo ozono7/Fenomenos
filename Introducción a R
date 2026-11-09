@@ -57,8 +57,10 @@ celsius_a_kelvin <- function(celsius) {
 print(celsius_a_kelvin(25))  # Convertimos 25°C a Kelvin
 
 # 2. Cálculo de humedad absoluta (aproximación simple)
+# Humedad absoluta en g/m^3 con la presión de vapor en kPa
+# (la constante 2167 corresponde a Pv en kPa; con Pv en hPa sería 217)
 humedad_absoluta <- function(presion_vapor, temperatura) {
-  return((217 * presion_vapor) / (temperatura + 273.15))
+  return((2167 * presion_vapor) / (temperatura + 273.15))
 }
 print(humedad_absoluta(2.3, 25))  # Ejemplo con P_v = 2.3 kPa y T = 25°C
 

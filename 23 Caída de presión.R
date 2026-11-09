@@ -8,7 +8,7 @@
 #
 # Material académico para estudiantes
 #
-# Descripción: Cálculo de la caída de presión en un sistema de tuberías con cambio de diámetro.
+# Descripción: Cálculo de la variación de presión en un sistema de tuberías con expansión repentina de diámetro.
 # ==========================================================================
 
 
@@ -30,8 +30,10 @@ U2 <- Q / A2                      # 3.45 ft/s
 # Coeficiente de expansión (Borda-Carnot)
 K_expansion <- (1 - (D1^2 / D2^2))^2  # 0.5558
 
-# Cálculo CORRECTO de ΔP (pérdida de presión POSITIVA)
+# Cálculo de ΔP = P2 - P1 (variación de presión en la expansión)
 # Ecuación: ΔP/ρ = (U1² - U2²)/(2gc) - (K_expansion * U1²)/(2gc)
+# El resultado es POSITIVO: en una expansión repentina la presión AUMENTA
+# (parte de la energía cinética se recupera como presión), no disminuye
 Delta_P <- rho * ( (U1^2 - U2^2)/(2*gc) - (K_expansion * U1^2)/(2*gc) )
 
 # Conversión a psi
@@ -39,10 +41,10 @@ Delta_P_psi <- Delta_P / 144
 
 # Resultados
 cat("----------------------------------------\n")
-cat("Resultados CORREGIDOS:\n")
+cat("Resultados:\n")
 cat("----------------------------------------\n")
 cat("Velocidad en 4 in:", round(U1, 2), "ft/s\n")
 cat("Velocidad en 8 in:", round(U2, 2), "ft/s\n")
 cat("Coeficiente de expansión:", round(K_expansion, 4), "\n")
-cat("Caída de presión (ΔP):", round(Delta_P_psi, 4), "psi\n")
+cat("Aumento de presión (P2 - P1):", round(Delta_P_psi, 4), "psi\n")
 cat("----------------------------------------\n")
