@@ -1,14 +1,16 @@
+# ==========================================================================
 # 3 Presión manométrica
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+#
+# Descripción: Cálculo de la lectura del manómetro A en psi
+# ==========================================================================
 
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
-# -----------------------------------------------------------
-### Problema: Cálculo de la lectura del manómetro A en psi
-# Un depósito contiene aceite con una densidad relativa de 0.75.
-# Se usa un manómetro con mercurio (S_HG = 13.6) para medir la presión.
-# Se desea determinar la lectura del manómetro A en psi.
 
 # 1. Definir las constantes y variables
 densidad_relativa_aceite <- 0.75  # Densidad relativa del aceite

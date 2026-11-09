@@ -1,17 +1,16 @@
+# ==========================================================================
 # 4 Presión relativa
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+#
+# Descripción: Cálculo de la presión relativa y la altura del mercurio en un manómetro
+# ==========================================================================
 
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
-# -----------------------------------------------------------
-### Problema: Cálculo de la presión relativa y la altura del mercurio en un manómetro
-# Un tanque cilíndrico con extremos semiesféricos contiene un fluido volátil y vapor.
-# La densidad del líquido es de 800 kg/m³, y la del vapor es insignificante.
-# La presión del vapor es de 120 kPa (abs) y la presión atmosférica es de 101 kPa (abs).
-# Se desea determinar:
-# (a) La lectura de presión relativa en el indicador de presión.
-# (b) La altura, h, del manómetro de mercurio.
 
 # 1. Definir las constantes y variables
 densidad_liquido <- 800  # Densidad del líquido en kg/m³

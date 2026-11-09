@@ -1,8 +1,17 @@
+# ==========================================================================
 # Problema 14: Cálculo del ahorro en el costo de bombeo por año y por kilómetro de tubería
-# Autor: José Juan Torres 
-# Descripción: Este código calcula el ahorro en el costo de bombeo después de aplicar un revestimiento
-# a una tubería vieja, considerando la rugosidad y la eficiencia de la bomba.
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
 # Fecha: 2025
+#
+# Descripción: Este código calcula el ahorro en el costo de bombeo después de aplicar un revestimiento a una tubería vieja, considerando la rugosidad y la eficiencia de la bomba.
+# ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 Q <- 6                      # Caudal volumétrico en m^3/s

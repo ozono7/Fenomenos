@@ -1,8 +1,17 @@
+# ==========================================================================
 # Problema 12: Cálculo de la potencia de la bomba y caída de presión en accesorios
-# Autor: José Juan Torres Martínez
-# Descripción: Este código calcula la potencia de la bomba necesaria para bombear benceno líquido
-# desde un tanque de almacenamiento hasta un reactor químico, y la caída de presión en los accesorios.
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
 # Fecha: 2023-10-30
+#
+# Descripción: Este código calcula la potencia de la bomba necesaria para bombear benceno líquido desde un tanque de almacenamiento hasta un reactor químico, y la caída de presión en los accesorios.
+# ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 Q <- 3.53147                # Caudal volumétrico en ft^3/s

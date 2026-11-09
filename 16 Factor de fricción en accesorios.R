@@ -1,11 +1,16 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
+# ==========================================================================
+# Factor de Fricción en Accesorios
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+#
+# Descripción: Calcular la pérdida de carga total y el factor de fricción equivalente en accesorios
+# ==========================================================================
 
-# Tema: Factor de Fricción en Accesorios  
-# Objetivo: Calcular la pérdida de carga total y el factor de fricción equivalente en accesorios  
 
 # Datos del problema  
 Q <- 0.01  # Flujo volumétrico en m³/s  

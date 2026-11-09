@@ -1,8 +1,17 @@
+# ==========================================================================
 # Problema 13: Cálculo del diámetro de tubería necesaria para transportar agua
-# Autor: José Juan Torres
-# Descripción: Este código calcula el diámetro de una tubería nueva de fierro fundido
-# necesaria para transportar agua a 25°C con una pérdida de carga específica.
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
 # Fecha: 2023-10-30
+#
+# Descripción: Este código calcula el diámetro de una tubería nueva de fierro fundido necesaria para transportar agua a 25°C con una pérdida de carga específica.
+# ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 Q <- 0.02208157            # Caudal volumétrico en m^3/s (350 GPM)

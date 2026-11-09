@@ -1,11 +1,16 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular  
-# -----------------------------------------------------------
+# ==========================================================================
+# Evaluación de Sistema de Bombeo para Benceno
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+#
+# Descripción: a) Adecuación de bomba, b) Tiempo de vaciado, c) Trabajo, d) NPSH
+# ==========================================================================
 
-# Tema: Evaluación de Sistema de Bombeo para Benceno  
-# Objetivos: a) Adecuación de bomba, b) Tiempo de vaciado, c) Trabajo, d) NPSH  
 
 # Datos del problema  
 volumen_gal <- 10000              # Volumen en galones  

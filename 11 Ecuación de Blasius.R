@@ -1,13 +1,17 @@
+# ==========================================================================
 # Problema 11: Cálculo de la potencia necesaria para bombear un líquido a través de una tubería
-# Autor: José Juan Torres Martínez
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
 # Fecha: 2023-10-30
+#
+# Descripción: Cálculo de la potencia necesaria para bombear un líquido a través de una tubería.
+# ==========================================================================
 
-# Nota: Este problema calcula la potencia necesaria por cada milla para bombear un líquido
-# a través de una tubería de 18 pulgadas de diámetro. El caudal es de 3 ft³/s, y las
-# propiedades del líquido son: viscosidad cinemática ν = 3.3 × 10⁻⁴ ft²/s y densidad
-# ρ = 55 lb/ft³. Se utiliza la ecuación de Blasius para determinar el factor de fricción.
 
 # Paso 1: Definir las constantes y variables
 D <- 1.4063                # Diámetro interno de la tubería en ft (18 pulgadas)

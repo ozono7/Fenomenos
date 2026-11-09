@@ -1,11 +1,16 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
+# ==========================================================================
+# Flujo en Ramales de Tuberías con Benceno
+# ==========================================================================
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
+# Material académico para estudiantes
+#
+# Descripción: Calcular el caudal volumétrico en cada ramal
+# ==========================================================================
 
-# Tema: Flujo en Ramales de Tuberías con Benceno  
-# Objetivo: Calcular el caudal volumétrico en cada ramal  
 
 # Datos del problema  
 rho <- 55                    # Densidad del benceno en lb/ft³  
