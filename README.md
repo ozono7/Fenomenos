@@ -3,8 +3,8 @@
 Problemas resueltos en R de mecánica de fluidos y fenómenos de
 transporte: medición de presión con manómetros, velocidad y tipo de
 flujo en tuberías, pérdidas de carga por fricción y accesorios, potencia
-de bombeo y costo de bombeo. Cada archivo resuelve un problema con sus
-cálculos.
+de bombeo y costo de bombeo, rosa de vientos y dispersión gaussiana de
+contaminantes. Cada archivo resuelve un problema con sus cálculos.
 
 ## Contenido
 
@@ -18,6 +18,10 @@ cálculos.
 - **Sistemas de bombeo:** potencia de bomba, tiempo de descarga de
   tanque, NPSH, diferencia de alturas entre depósitos y costo de
   bombeo.
+- **Simulación ambiental:** rosa de vientos a partir de mediciones de
+  dirección y velocidad del viento (26) y dispersión gaussiana de
+  contaminantes desde una chimenea, con comparación con la
+  NOM-022-SSA1-2019 (27).
 - **Apoyo:** ejercicios básicos de hidráulica, carta psicrométrica e
   introducción a R.
 
@@ -25,6 +29,13 @@ cálculos.
 
 Cada archivo `.R` es un problema independiente y documentado: ábrelo en
 R o RStudio y ejecútalo completo. Solo necesitas R instalado; los cálculos usan R base, sin paquetes adicionales.
+
+Las lecciones 26 y 27 (simulación ambiental) usan tidyverse (ggplot2,
+dplyr, readr) para leer los datos y hacer los gráficos, y cada una lee
+su archivo de datos (`datos_viento.csv` y `datos_emision.csv`) del
+mismo directorio. Si falta tidyverse, instalarlo una vez con
+`install.packages("tidyverse")`. Cada gráfico se exporta en PNG a
+300 dpi con `ggsave()`.
 
 ## Autor
 
