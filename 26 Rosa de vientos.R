@@ -19,7 +19,7 @@
 #   es la dirección DESDE LA QUE sopla el viento, en grados medidos
 #   desde el norte y en sentido horario (0 grados = norte, 90 = este,
 #   180 = sur, 270 = oeste). Todas las frecuencias y velocidades medias
-#   se calculan A PARTIR DE LOS DATOS; nada está dado de antemano.
+#   se calculan A PARTIR DE LOS DATOS.
 #
 # Objetivos de aprendizaje:
 #   - Leer mediciones reales de viento con read_csv().
