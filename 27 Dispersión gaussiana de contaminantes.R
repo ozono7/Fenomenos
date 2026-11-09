@@ -82,8 +82,7 @@
 #   (1 ppm de SO2 = 2620 µg/m3, masa molar 64.07 g/mol): 0.075 ppm =
 #   196.5 µg/m3 y 0.04 ppm = 104.8 µg/m3.
 #
-# Supuestos del cálculo (se escriben para que el resultado se lea con
-#   su alcance real): altura efectiva H igual a la altura física de la
+# Supuestos del cálculo: altura efectiva H igual a la altura física de la
 #   chimenea (30 m), es decir, sin sobreelevación del penacho por
 #   flotación ni por momento; terreno plano; viento constante en
 #   dirección e intensidad durante el periodo modelado; clase de
