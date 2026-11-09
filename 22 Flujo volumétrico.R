@@ -1,14 +1,16 @@
 # ==========================================================================
 # Ajuste de Longitud de Tubería para Cambiar Velocidad
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Calcular la longitud de tubería a eliminar
 # ==========================================================================
+
 
 # Datos del problema  
 v1 <- 1.0                          # Velocidad inicial en m/s  

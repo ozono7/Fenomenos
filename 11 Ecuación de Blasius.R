@@ -1,15 +1,17 @@
 # ==========================================================================
 # Problema 11: Cálculo de la potencia necesaria para bombear un líquido a través de una tubería
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 # Fecha: 2023-10-30
 #
 # Descripción: Cálculo de la potencia necesaria para bombear un líquido a través de una tubería.
 # ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 D <- 1.4063                # Diámetro interno de la tubería en ft (18 pulgadas)

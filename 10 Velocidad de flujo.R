@@ -1,15 +1,17 @@
 # ==========================================================================
 # Problema 10: Cálculo de la velocidad de flujo en una tubería de 4 pulgadas de diámetro
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 # Fecha: 2023-10-30
 #
 # Descripción: Este código calcula la velocidad de flujo de petróleo crudo en una tubería de 4 pulgadas de diámetro, utilizando las lecturas manométricas en dos estaciones hidrométricas.
 # ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 D <- 0.3355                # Diámetro interno de la tubería en ft (4 pulgadas)

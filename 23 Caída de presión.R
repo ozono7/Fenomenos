@@ -1,14 +1,16 @@
 # ==========================================================================
 # Problema 23: Caída de presión
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Cálculo de la caída de presión en un sistema de tuberías con cambio de diámetro.
 # ==========================================================================
+
 
 # Datos del problema
 Q <- 1.2                          # ft³/s

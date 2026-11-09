@@ -1,14 +1,16 @@
 # ==========================================================================
 # 3 Presión manométrica
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Cálculo de la lectura del manómetro A en psi
 # ==========================================================================
+
 
 # 1. Definir las constantes y variables
 densidad_relativa_aceite <- 0.75  # Densidad relativa del aceite

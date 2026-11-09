@@ -1,14 +1,16 @@
 # ==========================================================================
 # 2 Presiones en un tubo
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Cálculo de las presiones P_A y P_B en un piezómetro
 # ==========================================================================
+
 
 # 1. Definir las constantes y variables
 P_atm <- 101325  # Presión atmosférica en Pa

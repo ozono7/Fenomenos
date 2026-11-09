@@ -1,14 +1,16 @@
 # ==========================================================================
 # Cálculo de Potencia de Bomba para Sistema Multisalida
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Determinar la potencia requerida (HP)
 # ==========================================================================
+
 
 # Datos del problema  
 eficiencia <- 0.68                # Eficiencia de la bomba (68%)  

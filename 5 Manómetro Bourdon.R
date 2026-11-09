@@ -1,14 +1,16 @@
 # ==========================================================================
 # 5 Manómetro Bourdon
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Cálculo de la elevación en los piezómetros y lectura del manómetro de mercurio
 # ==========================================================================
+
 
 # 1. Definir las constantes y variables
 densidad_agua <- 999.98  # Densidad del agua en kg/m³

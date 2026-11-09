@@ -1,14 +1,16 @@
 # ==========================================================================
 # Problema 15: Cálculo del gasto descargado por un tubo
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Este código calcula el gasto descargado por un tubo que transporta agua a 150°F.
 # ==========================================================================
+
 
 # Paso 1: Definir las constantes y variables
 Z1_Z2 <- 260                # Diferencia de altura en ft

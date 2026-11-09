@@ -1,14 +1,16 @@
 # ==========================================================================
 # 4 Presión relativa
 # ==========================================================================
-# Autor: José Juan Torres Martínez
-# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
-# Doctorado en Ciencias en Bioprocesos
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Autor: Dr. José Juan Torres Martínez
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
+#
 # Material académico para estudiantes
 #
 # Descripción: Cálculo de la presión relativa y la altura del mercurio en un manómetro
 # ==========================================================================
+
 
 # 1. Definir las constantes y variables
 densidad_liquido <- 800  # Densidad del líquido en kg/m³
