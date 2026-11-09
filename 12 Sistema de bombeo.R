@@ -21,12 +21,11 @@ rho <- 54.5                 # Densidad del benceno en lb/ft^3
 mu <- 0.00067               # Viscosidad dinámica del benceno en lb/(ft·s)
 gc <- 32.2                  # Factor de conversión gravitacional en (lb·ft)/(lb_f·s^2)
 P1_abs <- 2116.8            # Presión absoluta en el tanque de almacenamiento en lb_f/ft^2
-# Dato del problema: presión absoluta en el reactor. No se pudo derivar
-# de ningún otro dato del enunciado: el valor redondo más cercano es
-# 5 bar manométricos (72.51 psi), que con las conversiones estándar da
-# 12559.5 lb_f/ft^2, no 12558.43, así que se deja el valor tal como viene
-# en el problema.
-P2_abs <- 12558.43413       # Presión absoluta en el reactor en lb_f/ft^2 (dato del problema)
+# Dato del problema: presión manométrica en el reactor, 5 bar (confirmado
+# por Juan, 2026-11-09). Se convierte a presión absoluta en lb_f/ft^2:
+# 1 bar = 14.5038 psi; presión atmosférica = 14.696 psi.
+P2_man_bar <- 5             # Presión manométrica en el reactor, en bar
+P2_abs <- (P2_man_bar * 14.5038 + 14.696) * 144  # Presión absoluta en el reactor en lb_f/ft^2 (12558.96; el valor original del problema, 12558.43, difiere solo 0.004 % por redondeo de las constantes)
 Z2_Z1 <- 200 * 3.28084      # Diferencia de altura entre el reactor y el tanque en ft (200 m)
 U1 <- 0                     # Velocidad en el tanque de almacenamiento en ft/s
 S <- pi * (D / 2)^2         # Área transversal de la tubería en ft^2
