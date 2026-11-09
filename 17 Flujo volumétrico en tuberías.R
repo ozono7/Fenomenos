@@ -1,11 +1,14 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
-
-# Tema: Flujo Volumétrico en Tuberías  
-# Objetivo: Calcular Q, v y Re usando la ecuación de Darcy-Weisbach  
+# ==========================================================================
+# Flujo Volumétrico en Tuberías
+# ==========================================================================
+# Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
+# Doctorado en Ciencias en Bioprocesos
+# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
+#
+# Descripción: Calcular Q, v y Re usando la ecuación de Darcy-Weisbach
+# ==========================================================================
 
 # Datos del problema  
 delta_P <- 150000      # Caída de presión en Pa (150 kPa = 150,000 Pa)  

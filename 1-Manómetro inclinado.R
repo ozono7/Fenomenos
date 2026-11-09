@@ -1,14 +1,14 @@
-#1-Manómetro inclinado
-
-# -----------------------------------------------------------
+# ==========================================================================
+# 1-Manómetro inclinado
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
-# -----------------------------------------------------------
-### Problema: Relación entre el desplazamiento del aceite en un manómetro inclinado y la diferencia de presión
-# Un manómetro inclinado con un tubo de 2 mm de diámetro y un depósito de 30 mm de diámetro tiene un ángulo de inclinación de 20°.
-# Se usa aceite rojo manométrico con una densidad relativa de 0.827.
-# Se desea calcular la relación entre la medida del desplazamiento del aceite en el tubo inclinado (en mm) y la diferencia de presión (en Pa).
+# Material académico para estudiantes
+#
+# Descripción: Relación entre el desplazamiento del aceite en un manómetro inclinado y la diferencia de presión
+# ==========================================================================
 
 # 1. Definir las constantes y variables
 densidad_relativa <- 0.827

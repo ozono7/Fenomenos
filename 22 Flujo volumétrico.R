@@ -1,11 +1,14 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
-
-# Tema: Ajuste de Longitud de Tubería para Cambiar Velocidad  
-# Objetivo: Calcular la longitud de tubería a eliminar  
+# ==========================================================================
+# Ajuste de Longitud de Tubería para Cambiar Velocidad
+# ==========================================================================
+# Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
+# Doctorado en Ciencias en Bioprocesos
+# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
+#
+# Descripción: Calcular la longitud de tubería a eliminar
+# ==========================================================================
 
 # Datos del problema  
 v1 <- 1.0                          # Velocidad inicial en m/s  

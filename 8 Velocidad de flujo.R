@@ -1,10 +1,15 @@
+# ==========================================================================
 # Problema 8: Cálculo de la velocidad de flujo en estado estacionario en un tubo horizontal
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
 # Fecha: 2023-10-30
-# Descripción: Este código calcula la velocidad de flujo en estado estacionario de asfalto
-# en un tubo circular horizontal. 
+#
+# Descripción: Este código calcula la velocidad de flujo en estado estacionario de asfalto en un tubo circular horizontal.
+# ==========================================================================
 
 # Paso 1: Definir las constantes y variables
 delta_P <- 144              # Gradiente de presión en lb/ft^2 (1 psi/ft)

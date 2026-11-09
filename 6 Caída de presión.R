@@ -1,10 +1,15 @@
+# ==========================================================================
 # Problema 6: Cálculo de la caída de presión en una tubería horizontal
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
 # Fecha: 2023-10-30
-# Descripción: Este código calcula la caída de presión en una tubería horizontal
-# que transporta aceite lubricante. 
+#
+# Descripción: Este código calcula la caída de presión en una tubería horizontal que transporta aceite lubricante.
+# ==========================================================================
 
 # Paso 1: Definir las constantes y variables
 Q <- 0.8                     # Caudal volumétrico en ft^3/s

@@ -1,11 +1,14 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
-
-# Tema: Pérdida de Presión en Expansión Repentina  
-# Objetivo: Calcular ΔP debido a la expansión  
+# ==========================================================================
+# Pérdida de Presión en Expansión Repentina
+# ==========================================================================
+# Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
+# Doctorado en Ciencias en Bioprocesos
+# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
+#
+# Descripción: Calcular ΔP debido a la expansión
+# ==========================================================================
 
 # Datos del problema  
 Q <- 1.2                          # Flujo volumétrico en ft³/s  

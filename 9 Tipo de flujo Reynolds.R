@@ -1,10 +1,15 @@
+# ==========================================================================
 # Problema 9: Determinar el tipo de flujo en una tubería de 4 pulgadas de diámetro
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
 # Fecha: 2023-10-30
-# Descripción: Este código determina el tipo de flujo (laminar o turbulento) en una tubería
-# de 4 pulgadas de diámetro para diferentes fluidos: aire, agua, petróleo crudo y glicerina.
+#
+# Descripción: Este código determina el tipo de flujo (laminar o turbulento) en una tubería de 4 pulgadas de diámetro para diferentes fluidos: aire, agua, petróleo crudo y glicerina.
+# ==========================================================================
 
 # Paso 1: Definir las constantes y variables
 D <- 0.3355                # Diámetro interno de la tubería en ft (4 pulgadas)

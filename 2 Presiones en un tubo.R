@@ -1,13 +1,14 @@
+# ==========================================================================
 # 2 Presiones en un tubo
-# -----------------------------------------------------------
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
-# -----------------------------------------------------------
-### Problema: Cálculo de las presiones P_A y P_B en un piezómetro
-# Un tubo abierto (piezómetro) se conecta a un tanque con agua.
-# El agua sube hasta una altura de 90 mm dentro del tubo.
-# Se desea calcular las presiones P_A y P_B (en Pa) del aire por encima del agua, ignorando efectos capilares.
+# Material académico para estudiantes
+#
+# Descripción: Cálculo de las presiones P_A y P_B en un piezómetro
+# ==========================================================================
 
 # 1. Definir las constantes y variables
 P_atm <- 101325  # Presión atmosférica en Pa

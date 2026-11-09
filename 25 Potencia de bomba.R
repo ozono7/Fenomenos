@@ -1,11 +1,14 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular  
-# -----------------------------------------------------------
-
-# Tema: Cálculo de Potencia de Bomba para Sistema Multisalida  
-# Objetivo: Determinar la potencia requerida (HP)  
+# ==========================================================================
+# Cálculo de Potencia de Bomba para Sistema Multisalida
+# ==========================================================================
+# Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
+# Doctorado en Ciencias en Bioprocesos
+# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
+#
+# Descripción: Determinar la potencia requerida (HP)
+# ==========================================================================
 
 # Datos del problema  
 eficiencia <- 0.68                # Eficiencia de la bomba (68%)  

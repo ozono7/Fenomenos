@@ -1,10 +1,15 @@
+# ==========================================================================
 # Problema 7: Cálculo de la presión relativa en el tanque A
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
 # Fecha: 2023-10-30
-# Descripción: Este código calcula la presión relativa (manométrica) en el tanque A
-# para que exista un flujo de petróleo a través de una tubería. 
+#
+# Descripción: Este código calcula la presión relativa (manométrica) en el tanque A para que exista un flujo de petróleo a través de una tubería.
+# ==========================================================================
 
 # Paso 1: Definir las constantes y variables
 Q <- 0.114                  # Caudal volumétrico en ft^3/s (50 gal/min convertido)

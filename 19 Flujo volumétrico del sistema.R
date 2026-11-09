@@ -1,11 +1,14 @@
-# -----------------------------------------------------------
-# Autor: José Juan Torres Martínez  
-# Doctorado en Ciencias en Bioprocesos  
-# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática  
-# -----------------------------------------------------------
-
-# Tema: Flujo por Gravedad en Sistema de Tuberías  
-# Objetivo: Calcular el flujo volumétrico (Q)  
+# ==========================================================================
+# Flujo por Gravedad en Sistema de Tuberías
+# ==========================================================================
+# Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
+# Doctorado en Ciencias en Bioprocesos
+# Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
+# Material académico para estudiantes
+#
+# Descripción: Calcular el flujo volumétrico (Q)
+# ==========================================================================
 
 # Datos del problema  
 T <- 75                              # Temperatura en °F  

@@ -1,15 +1,14 @@
+# ==========================================================================
 # 5 Manómetro Bourdon
-
-# -----------------------------------------------------------
+# ==========================================================================
 # Autor: José Juan Torres Martínez
+# Institución: Universidad Autónoma de San Luis Potosí (UASLP)
 # Doctorado en Ciencias en Bioprocesos
 # Laboratorio de Biotecnología Molecular de Células Vegetales y Bioinformática
-# -----------------------------------------------------------
-### Problema: Cálculo de la elevación en los piezómetros y lectura del manómetro de mercurio
-# Se tiene una lectura manométrica en el manómetro de Bourdon de -17.65 kPa.
-# Se desea determinar:
-# - La elevación (en metros) en las ramas abiertas de los piezómetros E, F y G.
-# - La lectura H (en metros) del manómetro de U de mercurio (S = 13.6).
+# Material académico para estudiantes
+#
+# Descripción: Cálculo de la elevación en los piezómetros y lectura del manómetro de mercurio
+# ==========================================================================
 
 # 1. Definir las constantes y variables
 densidad_agua <- 999.98  # Densidad del agua en kg/m³
